@@ -11,8 +11,8 @@ import {
 	NavContentMobile,
 	SideBar,
 	LinkMobile,
-} from './nav-bar/Nav-css';
-import companyLogo from '../assets/logo.PNG';
+} from './Nav-css';
+import companyLogo from '../../assets/logo.PNG';
 
 const Nav = () => {
 	const getWidth = () => {

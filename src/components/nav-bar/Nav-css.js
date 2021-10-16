@@ -43,7 +43,6 @@ export const LogoContainer = styled.div`
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
-	background-color: ${(props) => props.theme.colors.mainRed};
 	z-index: 20;
 `;
 
