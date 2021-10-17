@@ -1,8 +1,24 @@
 import React from 'react';
-import { MainSection } from '../../theme/layout/containers';
-
-const Landing = () => {
-	return <MainSection></MainSection>;
+import {
+	HeadingMain,
+	HeadingSub,
+	LandingBtn,
+	LandingSection,
+	LandingSectionContents,
+	LandingText,
+} from './Landing-css';
+const Landing = ({ isDesktop }) => {
+	return (
+		<LandingSection>
+			<LandingSectionContents>
+				<LandingText>
+					<HeadingMain isDesktop={isDesktop}>get a free estimate today</HeadingMain>
+					<HeadingSub isDesktop={isDesktop}>"At our best and at your service"</HeadingSub>
+				</LandingText>
+				<LandingBtn>contact us now</LandingBtn>
+			</LandingSectionContents>
+		</LandingSection>
+	);
 };
 
 export default Landing;

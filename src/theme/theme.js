@@ -7,7 +7,7 @@ const theme = {
 		greyDark: '#495057',
 		beige: '#e1dec4',
 		mainRed: '#990f13',
-		secondaryRed: '#e5383b',
+		secondaryRed: '#C71419',
 		mainGreen: '#60d394',
 		shadow: 'rgba(0,0,0,0.15)',
 	},

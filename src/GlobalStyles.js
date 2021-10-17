@@ -12,12 +12,13 @@ export const GlobalStyles = createGlobalStyle`
 html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
+	scroll-padding-top: 10vh;
+
 }
 
 body{
     font-family: "Poppins", sans-serif;
-	overflow-x:hidden;
-
+	overflow-x: hidden;
 }
 a{
 	text-decoration:none;

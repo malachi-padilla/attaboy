@@ -1,4 +1,6 @@
 import styled, { keyframes } from 'styled-components';
+import { FadeIn } from '../../theme/animations';
+import { BtnMain } from '../../theme/buttons';
 
 export const GrowSidebar = keyframes`
     0%{
@@ -7,16 +9,6 @@ export const GrowSidebar = keyframes`
   
     100%{
         height: 100vh
-    }
-`;
-
-export const FadeIn = keyframes`
-    0%{
-        opacity:0;
-    }
-  
-    100%{
-        opacity: 1;
     }
 `;
 
@@ -34,12 +26,13 @@ export const NavContainer = styled.nav`
 		props.isDesktop ? 'linear-gradient(120deg, #990f13 0%, #990f13 25%, #1c1c1e 25%)' : 'none'};
 	background-color: ${(props) => props.theme.colors.mainRed};
 	box-shadow: 0.3rem 0.3rem 1rem ${(props) => props.theme.colors.shadow};
+	z-index: 10;
 `;
 
 export const LogoContainer = styled.div`
 	display: flex;
 	height: 100%;
-	width: ${(props) => (props.isDesktop ? '20%' : '30%')};
+	width: ${(props) => (props.isDesktop ? '20%' : 'calc(100% / 3)')};
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
@@ -53,7 +46,7 @@ export const Logo = styled.div`
 	align-items: center;
 	background-color: ${(props) => props.theme.colors.mainRed};
 	img {
-		height: ${(props) => (props.isDesktop ? '100%' : '80%')};
+		height: ${(props) => (props.isDesktop ? '100%' : '60%')};
 	}
 `;
 
@@ -70,18 +63,17 @@ export const BurgerMenu = styled.label`
 	display: flex;
 	flex-direction: column;
 	height: 100%;
-	width: 70%;
-	align-items: flex-start;
+	width: calc(100% / 3);
+	align-items: center;
 	justify-content: center;
-	gap: 1rem;
-	padding-left: 2rem;
+	gap: 0.8rem;
 	cursor: pointer;
 	z-index: 20;
 	input {
 		display: none;
 	}
 	span {
-		height: 0.3rem;
+		height: 0.4rem;
 		width: 4rem;
 		border-radius: 1rem;
 		background-color: ${(props) => props.theme.colors.light};
@@ -95,7 +87,7 @@ export const BurgerMenu = styled.label`
 
 	input[type='checkbox']:checked ~ span:nth-of-type(1) {
 		transform-origin: bottom;
-		transform: rotate(45deg) translate(9px, 8px);
+		transform: rotate(45deg) translate(22%, 0.7rem);
 		width: 4rem;
 	}
 
@@ -108,7 +100,7 @@ export const BurgerMenu = styled.label`
 	input[type='checkbox']:checked ~ span:nth-of-type(3) {
 		transform-origin: bottom;
 		width: 0rem;
-		transform: translate(30px, -11px) rotate(45deg);
+		transform: rotate(45deg);
 	}
 `;
 
@@ -164,10 +156,16 @@ export const LinkMobile = styled(Link)`
 export const ContactBox = styled.div`
 	display: flex;
 	height: 100%;
-	width: 30%;
-	flex-direction: row;
+	width: calc(100% / 3);
 	justify-content: center;
 	align-items: center;
+`;
+
+export const ContactBtn = styled(BtnMain)`
+	width: ${(props) => (props.isDesktop ? '13rem' : '10rem')};
+	background: ${(props) => props.theme.colors.secondaryRed};
+	font-size: 1.2rem;
+	color: ${(props) => props.theme.colors.light};
 `;
 
 export const SideBar = styled.div`

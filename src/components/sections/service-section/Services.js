@@ -1,8 +1,13 @@
 import React from 'react';
-import { MainSection } from '../../../theme/layout/containers';
+import Carousel from '../../carousel/Carousel';
+import { ServicesSection } from './Services-css';
 
-const Services = () => {
-	return <MainSection></MainSection>;
+const Services = ({ isDesktop }) => {
+	return (
+		<ServicesSection id='services'>
+			<Carousel isDesktop={isDesktop} />
+		</ServicesSection>
+	);
 };
 
 export default Services;
