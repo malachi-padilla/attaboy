@@ -12,6 +12,7 @@ export const LandingSection = styled(MainSection)`
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: right center;
+	border-bottom: 0.3rem solid ${(props) => props.theme.colors.mainRed};
 `;
 
 export const LandingSectionContents = styled.div`

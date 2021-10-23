@@ -3,7 +3,7 @@ import { keyframes } from 'styled-components';
 export const MoveInLeft = keyframes`
 	0% {
 		opacity: 0;
-		transform: translateX(-10rem);
+		transform: translateX(-20rem);
 	}
 	80% {
 		transform: translateX(1rem);
@@ -16,7 +16,7 @@ export const MoveInLeft = keyframes`
 export const MoveInRight = keyframes`
 	0% {
 		opacity: 0;
-		transform: translateX(10rem);
+		transform: translateX(20rem);
 	}
 	80% {
 		transform: translateX(-1rem);

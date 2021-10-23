@@ -4,15 +4,15 @@ import { PrimaryHeading } from '../../theme/typogrophy';
 
 export const CarouselBody = styled.div`
 	display: flex;
-	height: 90%;
-	width: 90%;
-	background-image: url(${(props) => props.img});
+	height: 100%;
+	width: ${(props) => (props.isDesktop ? '60%' : ' 100%')};
+	background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${(props) => props.img});
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	border-radius: 0.4rem;
 	overflow: hidden;
 	flex-direction: row;
+	border: ${(props) => (props.isDesktop ? `0.8rem solid ${(props) => props.theme.colors.mainRed}` : 'none')};
 `;
 
 export const CarouselContents = styled.div`
@@ -22,8 +22,8 @@ export const CarouselContents = styled.div`
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	background-color: rgba(0, 0, 0, 0.7);
 	padding: 1rem;
+	animation: 1000ms ${(props) => props.animate && props.animation} ease-in-out;
 `;
 
 export const TextBox = styled.div`
@@ -31,14 +31,15 @@ export const TextBox = styled.div`
 	width: 80%;
 	display: flex;
 	flex-direction: column;
-	gap: 5rem;
+	gap: 10rem;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
 `;
 
 export const CarouselTextMain = styled(PrimaryHeading)`
-	font-size: ${(props) => (props.isDesktop ? '6rem' : ' 4rem')};
+	font-size: ${(props) => (props.isDesktop ? '6rem' : ' 5.5rem')};
+	text-transform: capitalize;
 `;
 
 export const EstimateBtn = styled(BtnMain)`

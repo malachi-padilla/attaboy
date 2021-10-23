@@ -47,8 +47,8 @@ const Nav = ({ isDesktop }) => {
 				</>
 			) : (
 				<NavContentMobile>
-					<BurgerMenu for='check' onChange={() => setMenuOpen((prevChek) => !prevChek)}>
-						<input type='checkbox' id='check' checked={menuOpen} />
+					<BurgerMenu htmlfor='check' onChange={() => setMenuOpen((prevChek) => !prevChek)}>
+						<input type='checkbox' id='check' checked={menuOpen} readOnly />
 						<span></span>
 						<span></span>
 						<span></span>

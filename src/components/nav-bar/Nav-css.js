@@ -164,8 +164,10 @@ export const ContactBox = styled.div`
 export const ContactBtn = styled(BtnMain)`
 	width: ${(props) => (props.isDesktop ? '13rem' : '10rem')};
 	background: ${(props) => props.theme.colors.secondaryRed};
-	font-size: 1.2rem;
+	font-size: ${(props) => (props.isDesktop ? '1.6rem' : '1.2rem')};
 	color: ${(props) => props.theme.colors.light};
+	transition: all 200ms ease-in;
+
 `;
 
 export const SideBar = styled.div`
