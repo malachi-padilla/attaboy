@@ -1,9 +1,11 @@
 import React from 'react';
 import {
+	Caption,
 	ImageCol,
 	LogoImg,
 	LogoText,
 	LogoTextBox,
+	PopUpText,
 	Row,
 	WorkSectionContainer,
 	WorkSectionGallery,
@@ -92,6 +94,7 @@ const Work = ({ isDesktop }) => {
 				</Row>
 			</WorkSectionLogos>
 			<WorkSectionGallery isDesktop={isDesktop}>
+				<Caption>View Gallery</Caption>
 				<ImageCol>
 					<img src={Img_three} alt='gallery_3' />
 					<img src={Img_8} alt='gallery_4' />

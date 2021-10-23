@@ -19,9 +19,36 @@ export const WorkSectionGallery = styled.div`
 	box-shadow: 0.3rem 0.3rem 1rem ${(props) => props.theme.colors.shadow};
 	background-color: ${(props) => props.theme.colors.dark};
 	overflow: hidden;
+	position: relative;
+	:hover img {
+		filter: blur(3px) brightness(80%);
+	}
+	:hover figcaption {
+		opacity: 1;
+	}
 `;
 
-export const ImageCol = styled.div`
+export const Caption = styled.figcaption`
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	transform: translate(-50%, 20%);
+	color: ${(props) => props.theme.colors.light};
+	text-transform: uppercase;
+	font-size: 4rem;
+	font-weight: 600;
+	text-align: center;
+	opacity: 0;
+	transition: all 300ms;
+	backface-visibility: hidden;
+	z-index: 10;
+	cursor: pointer;
+	:hover {
+		text-decoration: underline;
+	}
+`;
+
+export const ImageCol = styled.figure`
 	flex: 25%;
 	max-width: calc(100% / 3);
 	padding: 0 4px;
@@ -29,6 +56,7 @@ export const ImageCol = styled.div`
 		margin-top: 0.8rem;
 		vertical-align: middle;
 		width: 100%;
+		transition: all 0.3s ease-in;
 	}
 `;
 
@@ -62,7 +90,6 @@ export const WorkSectionLogos = styled.div`
 	height: ${(props) => (props.isDesktop ? '20%' : '25%')};
 	width: 100%;
 	position: relative;
-	cursor: pointer;
 `;
 
 export const Row = styled.div`
@@ -85,6 +112,7 @@ export const WorkSectionLogo = styled.div`
 	background-color: ${(props) => props.theme.colors.light};
 	box-shadow: 0.3rem 0.3rem 1rem ${(props) => props.theme.colors.shadow};
 	padding: 5px;
+	cursor: pointer;
 `;
 
 export const LogoImg = styled.div`
