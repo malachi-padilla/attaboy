@@ -5,6 +5,7 @@ import { ParagraphMain, PrimaryHeading } from '../../../theme/typogrophy';
 
 export const ServicesSection = styled(MainSection)`
 	flex-direction: row;
+	background-color: ${(props) => props.theme.colors.light};
 `;
 
 export const ServiceContents = styled.div`
@@ -27,17 +28,16 @@ export const TextBox = styled.div`
 
 export const ServiceHeading = styled(PrimaryHeading)`
 	color: ${(props) => props.theme.colors.dark};
-	font-size: 6rem;
 	font-weight: 800;
 
 	span {
 		color: ${(props) => props.theme.colors.secondaryRed};
+		font-family: 'Fugaz One', cursive;
 	}
 `;
 
 export const ServiceParagraph = styled(ParagraphMain)`
 	span {
-		font-weight: 800;
 	}
 `;
 

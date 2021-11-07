@@ -12,7 +12,6 @@ export const CarouselBody = styled.div`
 	background-position: center;
 	overflow: hidden;
 	flex-direction: row;
-	border: ${(props) => (props.isDesktop ? `0.8rem solid ${(props) => props.theme.colors.mainRed}` : 'none')};
 `;
 
 export const CarouselContents = styled.div`

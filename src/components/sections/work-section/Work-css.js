@@ -4,9 +4,9 @@ import { ParagraphSecondary, PrimaryHeading } from '../../../theme/typogrophy';
 
 export const WorkSectionContainer = styled(MainSection)`
 	flex-direction: column;
-	background-color: ${(props) => props.theme.colors.greyMed};
 	padding-top: 1rem;
 	padding-bottom: ${(props) => (props.isDesktop ? 'none' : '1rem')};
+	position: relative;
 `;
 
 export const WorkSectionGallery = styled.div`
@@ -20,6 +20,7 @@ export const WorkSectionGallery = styled.div`
 	background-color: ${(props) => props.theme.colors.dark};
 	overflow: hidden;
 	position: relative;
+
 	:hover img {
 		filter: blur(3px) brightness(80%);
 	}
@@ -41,7 +42,7 @@ export const Caption = styled.figcaption`
 	opacity: 0;
 	transition: all 300ms;
 	backface-visibility: hidden;
-	z-index: 10;
+	z-index: 2;
 	cursor: pointer;
 	:hover {
 		text-decoration: underline;
@@ -71,12 +72,12 @@ export const WorkSectionTextBox = styled.div`
 `;
 
 export const WorkSectionHeading = styled(PrimaryHeading)`
-	font-size: ${(props) => (props.isDesktop ? '6rem' : '4rem')};
+	font-size: ${(props) => (props.isDesktop ? '5rem' : '4rem')};
 	line-height: 5rem;
-	color: ${(props) => props.theme.colors.light};
+	color: ${(props) => props.theme.colors.dark};
 	font-weight: 800;
 	span {
-		font-size: ${(props) => (props.isDesktop ? '7rem' : '5rem')};
+		font-size: ${(props) => (props.isDesktop ? '6rem' : '5rem')};
 		font-family: 'Fugaz One', cursive;
 		color: ${(props) => props.theme.colors.secondaryRed};
 	}
@@ -85,7 +86,7 @@ export const WorkSectionHeading = styled(PrimaryHeading)`
 export const WorkSectionLogos = styled.div`
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
+	justify-content: center;
 	align-items: center;
 	height: ${(props) => (props.isDesktop ? '20%' : '25%')};
 	width: 100%;
@@ -101,7 +102,7 @@ export const Row = styled.div`
 	align-items: center;
 	gap: 0.5rem;
 `;
-export const WorkSectionLogo = styled.div`
+export const WorkSectionLogo = styled.a`
 	display: flex;
 	height: 5rem;
 	width: 16rem;
@@ -109,10 +110,16 @@ export const WorkSectionLogo = styled.div`
 	justify-content: center;
 	align-items: center;
 	border-radius: 4px;
+	border: 1px solid transparent;
 	background-color: ${(props) => props.theme.colors.light};
 	box-shadow: 0.3rem 0.3rem 1rem ${(props) => props.theme.colors.shadow};
 	padding: 5px;
 	cursor: pointer;
+	transition: border 0.3s;
+	&:hover {
+		z-index: 2;
+		border: 1px solid ${(props) => props.theme.colors.mainGreen};
+	}
 `;
 
 export const LogoImg = styled.div`
@@ -122,7 +129,7 @@ export const LogoImg = styled.div`
 	justify-content: flex-end;
 	align-items: center;
 	img {
-		height: 90%;
+		height: 100%;
 		max-width: 60%;
 	}
 `;
