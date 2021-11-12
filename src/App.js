@@ -6,6 +6,7 @@ import Work from './components/sections/work-section/Work';
 import About from './components/sections/about-section/About';
 import Contacts from './components/sections/contact-section/Contacts';
 import { getReviews } from './api/reviewData';
+import Footer from './components/footer/Footer';
 
 const App = () => {
 	const [reviews, setReviews] = useState([]);
@@ -37,6 +38,7 @@ const App = () => {
 			<Work isDesktop={isDesktop} />
 			<About isDesktop={isDesktop} reviews={reviews} />
 			<Contacts isDesktop={isDesktop} />
+			<Footer />
 		</>
 	);
 };
