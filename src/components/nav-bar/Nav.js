@@ -31,12 +31,16 @@ const Nav = ({ isDesktop }) => {
 		}
 	}, [menuOpen]);
 
+	const handleLogoClick = () => {
+		window.location.href = '#';
+	};
+
 	return (
 		<NavContainer isDesktop={isDesktop}>
 			{isDesktop ? (
 				<>
 					<LogoContainer isDesktop={isDesktop}>
-						<Logo isDesktop={isDesktop} onClick={() => (window.location.href = '#')}>
+						<Logo isDesktop={isDesktop} onClick={handleLogoClick}>
 							<img src={companyLogo} alt='logo' />
 						</Logo>
 					</LogoContainer>
@@ -67,8 +71,8 @@ const Nav = ({ isDesktop }) => {
 							916-213-6418
 						</ContactBtn>
 					</ContactBox>
-					<LogoContainer>
-						<Logo href='#'>
+					<LogoContainer onClick={handleLogoClick}>
+						<Logo>
 							<img src={companyLogo} alt='logo' />
 						</Logo>
 					</LogoContainer>
