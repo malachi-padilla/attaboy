@@ -162,6 +162,8 @@ export const FormBtn = styled.input`
 	letter-spacing: 0.1rem;
 	transition: all 200ms ease-in;
 	outline: none;
+	-webkit-appearance: none;
+
 	&:hover {
 		background: ${(props) => props.theme.colors.mainRed};
 	}
@@ -186,7 +188,6 @@ export const BtnGroup = styled.div`
 	align-items: center;
 	justify-content: center;
 	gap: 1rem;
-	-webkit-appearance: none;
 `;
 
 export const CallBtn = styled(ContactBtn)`
