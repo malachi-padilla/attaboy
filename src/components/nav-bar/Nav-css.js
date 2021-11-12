@@ -47,6 +47,9 @@ export const Logo = styled.div`
 	background-color: ${(props) => props.theme.colors.mainRed};
 	img {
 		height: ${(props) => (props.isDesktop ? '100%' : '60%')};
+		@media only screen and (max-width: 1024px) {
+			height: 80%;
+		}
 	}
 `;
 
@@ -120,6 +123,10 @@ export const Links = styled.div`
 	gap: 2rem;
 	align-items: center;
 	justify-content: space-evenly;
+
+	@media only screen and (max-width: 1024px) {
+		gap: 1rem;
+	}
 `;
 
 export const Link = styled.a`
@@ -156,7 +163,7 @@ export const LinkMobile = styled(Link)`
 export const ContactBox = styled.div`
 	display: flex;
 	height: 100%;
-	width: calc(100% / 3);
+	width: 30%;
 	justify-content: center;
 	align-items: center;
 `;
@@ -167,6 +174,9 @@ export const ContactBtn = styled(BtnMain)`
 	font-size: ${(props) => (props.isDesktop ? '1.6rem' : '1.2rem')};
 	color: ${(props) => props.theme.colors.light};
 	transition: all 200ms ease-in;
+	@media only screen and (max-width: 320px) {
+		font-size: 1rem;
+	}
 `;
 
 export const SideBar = styled.div`

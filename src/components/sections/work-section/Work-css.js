@@ -76,10 +76,16 @@ export const WorkSectionHeading = styled(PrimaryHeading)`
 	line-height: 5rem;
 	color: ${(props) => props.theme.colors.dark};
 	font-weight: 800;
+	@media only screen and (max-width: 320px) {
+		font-size: 3rem;
+	}
 	span {
 		font-size: ${(props) => (props.isDesktop ? '6rem' : '5rem')};
 		font-family: 'Fugaz One', cursive;
 		color: ${(props) => props.theme.colors.secondaryRed};
+		@media only screen and (max-width: 320px) {
+			font-size: 4rem;
+		}
 	}
 `;
 
@@ -119,6 +125,9 @@ export const WorkSectionLogo = styled.a`
 	&:hover {
 		z-index: 2;
 		border: 1px solid ${(props) => props.theme.colors.mainGreen};
+	}
+	@media only screen and (max-width: 320px) {
+		width: 13rem;
 	}
 `;
 
