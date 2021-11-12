@@ -71,7 +71,15 @@ const Work = ({ isDesktop }) => {
 	};
 	return (
 		<WorkSectionContainer id='work' isDesktop={isDesktop}>
-			{galleryOpen && <GalleryModal galleryImage={galleryImage} images />}
+			{galleryOpen && (
+				<GalleryModal
+					galleryImage={galleryImage}
+					handleImageChangeLeft={handleImageChangeLeft}
+					handleImageChangeRight={handleImageChangeRight}
+					isDesktop={isDesktop}
+					setGalleryOpen={setGalleryOpen}
+				/>
+			)}
 			<WorkSectionTextBox isDesktop={isDesktop}>
 				<WorkSectionHeading isDesktop={isDesktop}>
 					done <span>locally.</span> done right.

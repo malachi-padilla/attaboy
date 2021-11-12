@@ -106,7 +106,7 @@ export const FormInput = styled.input`
 		box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
 		border: 1px solid ${(props) => props.theme.colors.mainGreen};
 		&:invalid {
-			border: 1px solid ${(props) => props.theme.colors.secondaryRed};
+			border: 1px solid ${(props) => props.theme.colors.tertiaryRed};
 		}
 	}
 
