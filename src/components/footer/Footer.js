@@ -7,10 +7,10 @@ const Footer = () => {
 			<FooterContents>
 				<License>LIC #1069116</License>
 				<Icons>
-					<YelpLink>
+					<YelpLink href='https://www.yelp.com/biz/atta-boy-garage-door-repair-rancho-cordova' target='_blank'>
 						<i className='fab fa-yelp'></i>
 					</YelpLink>
-					<FbLink>
+					<FbLink href='https://www.facebook.com/garagedoorservuces/?ref=bookmarks' target='_blank'>
 						<i className='fab fa-facebook'></i>
 					</FbLink>
 				</Icons>

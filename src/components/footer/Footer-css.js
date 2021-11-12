@@ -7,6 +7,7 @@ export const FooterContainer = styled.div`
 	align-items: center;
 	justify-content: center;
 	background-color: ${(props) => props.theme.colors.dark};
+	border-top: 1px solid ${(props) => props.theme.colors.mainRed};
 `;
 
 export const FooterContents = styled.div`
@@ -20,12 +21,13 @@ export const Icons = styled.div`
 	display: flex;
 	gap: 1rem;
 	font-size: 2rem;
-	color: ${(props) => props.theme.colors.light};
 `;
 
 export const YelpLink = styled.a`
 	cursor: pointer;
 	transition: all 0.2s;
+	color: ${(props) => props.theme.colors.light};
+
 	&:hover {
 		color: #c41200;
 	}
@@ -33,6 +35,7 @@ export const YelpLink = styled.a`
 export const FbLink = styled.a`
 	cursor: pointer;
 	transition: all 0.2s;
+	color: ${(props) => props.theme.colors.light};
 
 	&:hover {
 		color: #4267b2;
