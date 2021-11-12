@@ -58,7 +58,7 @@ export const AboutReviews = styled.div`
 	gap: 1rem;
 	height: 100%;
 	width: 60%;
-	background-color: ${(props) => props.theme.colors.greyMed};
+	background-color: ${(props) => props.theme.colors.greyLight};
 	overflow: hidden;
 	padding: 1rem;
 `;

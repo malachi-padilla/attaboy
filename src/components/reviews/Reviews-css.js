@@ -97,4 +97,8 @@ export const ProfileName = styled.p`
 export const ProfileLink = styled.a`
 	font-size: 1.2rem;
 	color: ${(props) => props.theme.colors.greyMed};
+	transition: all 0.2s;
+	&:hover {
+		color: #4895ef;
+	}
 `;
