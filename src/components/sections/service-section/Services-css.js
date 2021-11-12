@@ -5,6 +5,7 @@ import { ParagraphMain, PrimaryHeading } from '../../../theme/typogrophy';
 
 export const ServicesSection = styled(MainSection)`
 	flex-direction: row;
+	background-color: ${(props) => props.theme.colors.light};
 `;
 
 export const ServiceContents = styled.div`
@@ -18,31 +19,47 @@ export const ServiceContents = styled.div`
 export const TextBox = styled.div`
 	display: flex;
 	height: 50%;
-	width: 70%;
+	width: 100%;
 	justify-content: center;
 	flex-direction: column;
 	text-align: left;
 	gap: 3rem;
+	padding: 3rem;
 `;
 
 export const ServiceHeading = styled(PrimaryHeading)`
 	color: ${(props) => props.theme.colors.dark};
-	font-size: 6rem;
 	font-weight: 800;
 
 	span {
 		color: ${(props) => props.theme.colors.secondaryRed};
+		font-family: 'Fugaz One', cursive;
 	}
 `;
 
 export const ServiceParagraph = styled(ParagraphMain)`
-	span {
-		font-weight: 800;
+	color: ${(props) => props.theme.colors.greyDark};
+	strong {
+		color: ${(props) => props.theme.colors.dark};
+	}
+`;
+
+export const ListOfServices = styled.ul`
+	list-style: none;
+	font-size: 2rem;
+	i {
+		margin-right: 1rem;
+		color: ${(props) => props.theme.colors.secondaryRed};
+	}
+	li {
+		margin-bottom: 1rem;
+		color: ${(props) => props.theme.colors.greyDark};
+		text-transform: capitalize;
 	}
 `;
 
 export const ServiceBtn = styled(BtnMain)`
 	width: 16rem;
 	line-height: 2.5rem;
-	font-size: 1.6rem;
+	font-size: 1.2rem;
 `;

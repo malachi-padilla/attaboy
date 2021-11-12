@@ -24,4 +24,13 @@ a{
 	text-decoration:none;
 }
 
+input{
+		font-family: inherit;
+}
+
+textarea{
+		font-family: inherit;
+
+}
+
 `;

@@ -41,7 +41,7 @@ export const LogoContainer = styled.div`
 
 export const Logo = styled.div`
 	display: flex;
-	height: ${(props) => (props.isDesktop ? '70%' : '90%')};
+	height: ${(props) => (props.isDesktop ? '80%' : '90%')};
 	justify-content: center;
 	align-items: center;
 	background-color: ${(props) => props.theme.colors.mainRed};
@@ -167,7 +167,6 @@ export const ContactBtn = styled(BtnMain)`
 	font-size: ${(props) => (props.isDesktop ? '1.6rem' : '1.2rem')};
 	color: ${(props) => props.theme.colors.light};
 	transition: all 200ms ease-in;
-
 `;
 
 export const SideBar = styled.div`

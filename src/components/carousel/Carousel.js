@@ -55,7 +55,7 @@ const Carousel = ({ isDesktop }) => {
 							: image === images[1]
 							? 'emergency repairs'
 							: image === images[2]
-							? 'spring repairs & installs'
+							? 'spring conversions & installs'
 							: 'openers & tracks'}
 					</CarouselTextMain>
 					<EstimateBtn href='#contact'>

@@ -6,5 +6,5 @@ export const MainSection = styled.section`
 	justify-content: center;
 	align-items: center;
 	width: 100vw;
-	background-color: ${(props) => props.theme.colors.light};
+	background-color: ${(props) => props.theme.colors.greyLight};
 `;

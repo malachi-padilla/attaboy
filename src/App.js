@@ -5,9 +5,10 @@ import Services from './components/sections/service-section/Services';
 import Work from './components/sections/work-section/Work';
 import About from './components/sections/about-section/About';
 import Contacts from './components/sections/contact-section/Contacts';
-import { getReviews } from './api/yelpData';
+import { getReviews } from './api/reviewData';
 
 const App = () => {
+	const [reviews, setReviews] = useState([]);
 	const getWidth = () => {
 		if (window.innerWidth >= 770) {
 			return true;
@@ -24,8 +25,9 @@ const App = () => {
 	}, []);
 
 	useEffect(() => {
-		getReviews();
-		console.log();
+		getReviews().then((response) => {
+			setReviews(response.result.reviews);
+		});
 	}, []);
 	return (
 		<>
@@ -33,8 +35,8 @@ const App = () => {
 			<Landing isDesktop={isDesktop} />
 			<Services isDesktop={isDesktop} />
 			<Work isDesktop={isDesktop} />
-			<About />
-			<Contacts />
+			<About isDesktop={isDesktop} reviews={reviews} />
+			<Contacts isDesktop={isDesktop} />
 		</>
 	);
 };
