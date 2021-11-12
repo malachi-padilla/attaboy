@@ -14,6 +14,7 @@ import {
 	ContactBtn,
 } from './Nav-css';
 import companyLogo from '../../assets/logo.PNG';
+import { disableScroll, enableScroll } from '../../util/utilFunctions';
 
 const Nav = ({ isDesktop }) => {
 	const [menuOpen, setMenuOpen] = useState(false);
@@ -21,6 +22,14 @@ const Nav = ({ isDesktop }) => {
 	useEffect(() => {
 		setMenuOpen(false);
 	}, [isDesktop]);
+
+	useEffect(() => {
+		if (menuOpen) {
+			disableScroll();
+		} else {
+			enableScroll();
+		}
+	}, [menuOpen]);
 
 	return (
 		<NavContainer isDesktop={isDesktop}>
