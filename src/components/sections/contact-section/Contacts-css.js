@@ -94,6 +94,8 @@ export const FormInput = styled.input`
 	color: ${(props) => props.theme.colors.dark};
 	background-color: ${(props) => props.theme.colors.greyLight};
 	transition: all 500ms;
+	-webkit-appearance: none;
+
 	@media only screen and (max-width: 320px) {
 		line-height: 2rem;
 	}
@@ -127,6 +129,7 @@ export const FormTextArea = styled.textarea`
 	overflow: auto;
 	color: ${(props) => props.theme.colors.dark};
 	transition: all 500ms;
+	-webkit-appearance: none;
 
 	&:hover {
 		border: 1px solid ${(props) => props.theme.colors.greyDark};
@@ -183,6 +186,7 @@ export const BtnGroup = styled.div`
 	align-items: center;
 	justify-content: center;
 	gap: 1rem;
+	-webkit-appearance: none;
 `;
 
 export const CallBtn = styled(ContactBtn)`
