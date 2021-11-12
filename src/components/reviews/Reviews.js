@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-	Details,
 	Logo,
 	ProfileDetails,
 	ProfileLink,

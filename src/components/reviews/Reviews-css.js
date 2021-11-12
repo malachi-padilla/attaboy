@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import googleLogo from '../../assets/google.svg';
-import { ParagraphMain } from '../../theme/typogrophy';
 
 export const ReviewCard = styled.div`
 	display: flex;
