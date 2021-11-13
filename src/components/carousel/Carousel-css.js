@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { BtnMain } from '../../theme/buttons';
-import { PrimaryHeading } from '../../theme/typogrophy';
 
 export const CarouselBody = styled.div`
 	display: flex;
@@ -27,18 +26,25 @@ export const CarouselContents = styled.div`
 
 export const TextBox = styled.div`
 	height: 100%;
-	width: 80%;
+	width: 70%;
 	display: flex;
 	flex-direction: column;
-	gap: 10rem;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+	gap: ${(props) => (props.isDesktop ? '10rem' : '3rem')};
 `;
 
-export const CarouselTextMain = styled(PrimaryHeading)`
-	font-size: ${(props) => (props.isDesktop ? '6rem' : ' 5.5rem')};
+export const CarouselTextMain = styled.h2`
+	font-size: ${(props) => (props.isDesktop ? '6rem' : ' 5rem')};
 	text-transform: capitalize;
+	color: ${(props) => props.theme.colors.light};
+`;
+
+export const CarouselParagraph = styled.p`
+	font-size: 2rem;
+	color: ${(props) => props.theme.colors.light};
+	font-weight: 300;
 `;
 
 export const EstimateBtn = styled(BtnMain)`
@@ -54,5 +60,5 @@ export const CarouselBtn = styled.button`
 	border: none;
 	font-size: ${(props) => (props.isDesktop ? '5rem' : '3rem')};
 	cursor: pointer;
-	width: 10%;
+	width: 15%;
 `;

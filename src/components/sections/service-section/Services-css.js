@@ -14,17 +14,17 @@ export const ServiceContents = styled.div`
 	width: 40%;
 	align-items: center;
 	justify-content: center;
+	padding: 6rem;
 `;
 
 export const TextBox = styled.div`
 	display: flex;
-	height: 50%;
+	height: 100%;
 	width: 100%;
 	justify-content: center;
 	flex-direction: column;
 	text-align: left;
 	gap: 3rem;
-	padding: 3rem;
 `;
 
 export const ServiceHeading = styled(PrimaryHeading)`

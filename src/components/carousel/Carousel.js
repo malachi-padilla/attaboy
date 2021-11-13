@@ -1,5 +1,13 @@
 import React, { useState } from 'react';
-import { CarouselBody, CarouselBtn, CarouselContents, CarouselTextMain, EstimateBtn, TextBox } from './Carousel-css';
+import {
+	CarouselBody,
+	CarouselBtn,
+	CarouselContents,
+	CarouselTextMain,
+	EstimateBtn,
+	TextBox,
+	CarouselParagraph,
+} from './Carousel-css';
 import Installs from '../../assets/installs.png';
 import Repairs from '../../assets/repairs.png';
 import Springs from '../../assets/springs_2.png';
@@ -48,7 +56,7 @@ const Carousel = ({ isDesktop }) => {
 					isDesktop={isDesktop}>
 					<i className='fas fa-angle-left'></i>
 				</CarouselBtn>
-				<TextBox>
+				<TextBox isDesktop={isDesktop}>
 					<CarouselTextMain isDesktop={isDesktop}>
 						{image === images[0]
 							? 'custom door installs'
@@ -58,6 +66,18 @@ const Carousel = ({ isDesktop }) => {
 							? 'spring conversions & installs'
 							: 'openers & tracks'}
 					</CarouselTextMain>
+					{!isDesktop && (
+						<CarouselParagraph>
+							{image === images[0]
+								? 'lorem'
+								: image === images[1]
+								? 'We know the importance of a properly work garage door so you can Rest assured knowing we are always ready to assist you 24/7. Most repairs can be made same day.'
+								: image === images[2]
+								? 'lorem'
+								: 'lorem'}
+						</CarouselParagraph>
+					)}
+
 					<EstimateBtn href='#contact'>
 						{image === images[0]
 							? 'get an estimate'

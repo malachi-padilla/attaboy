@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { MainSection } from '../../../theme/layout/containers';
 import { ParagraphMain, SecondaryHeading } from '../../../theme/typogrophy';
 import Image from '../../../assets/truck2.jpeg';
-import { ContactBtn } from '../../nav-bar/Nav-css';
+import { BtnMain } from '../../../theme/buttons';
 
 export const ContactSection = styled(MainSection)`
 	flex-direction: row;
@@ -12,7 +12,7 @@ export const ContactSection = styled(MainSection)`
 `;
 
 export const ContactForm = styled.form`
-	height: 100%;
+	height: ${(props) => (props.isDesktop ? '80%' : '100%')};
 	width: ${(props) => (props.isDesktop ? '40%' : '100%')};
 	display: flex;
 	flex-direction: column;
@@ -21,11 +21,14 @@ export const ContactForm = styled.form`
 	justify-content: center;
 	background-color: ${(props) => props.theme.colors.light};
 	border-radius: ${(props) => (props.isDesktop ? '4px' : 'unset')};
+	@media only screen and (min-width: 1024px) {
+		width: 50%;
+	}
 `;
 
 export const FormHeading = styled.div`
 	height: 25%;
-	width: 100%;
+	width: 90%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -146,28 +149,25 @@ export const FormTextArea = styled.textarea`
 `;
 
 export const FormBtn = styled.input`
-	font-size: 1.6rem;
-	width: 100%;
-	line-height: 3rem;
+	height: 3rem;
 	padding: 0.8rem;
+	width: 100%;
 	background: ${(props) => props.theme.colors.secondaryRed};
 	color: ${(props) => props.theme.colors.light};
 	text-align: center;
 	border-radius: 4px;
-	border: none;
 	text-transform: uppercase;
 	font-weight: 600;
 	box-shadow: 0.3rem 0.3rem 1rem ${(props) => props.theme.colors.shadow};
 	cursor: pointer;
 	letter-spacing: 0.1rem;
 	transition: all 200ms ease-in;
-	outline: none;
-	-webkit-appearance: none;
+	border: none;
 
 	&:hover {
 		background: ${(props) => props.theme.colors.mainRed};
 	}
-	@media only screen and (max-width: 320px) {
+	@media only screen and (min-width: 320px) {
 		line-height: 2rem;
 	}
 `;
@@ -179,6 +179,9 @@ export const ContactSectionImage = styled.div`
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+	@media only screen and (max-width: 1024px) {
+		width: 50%;
+	}
 `;
 
 export const BtnGroup = styled.div`
@@ -190,8 +193,9 @@ export const BtnGroup = styled.div`
 	gap: 1rem;
 `;
 
-export const CallBtn = styled(ContactBtn)`
+export const CallBtn = styled(BtnMain)`
 	width: 100%;
+	height: 3rem;
 	line-height: 3rem;
 	font-size: 1.6rem;
 `;

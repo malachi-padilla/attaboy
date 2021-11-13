@@ -14,7 +14,7 @@ export const WorkSectionGallery = styled.div`
 	flex-wrap: wrap;
 	padding: 0 4px;
 	height: ${(props) => (props.isDesktop ? '60%' : '50%')};
-	width: ${(props) => (props.isDesktop ? '100%' : '90%')};
+	width: ${(props) => (props.isDesktop ? '80%' : '90%')};
 	border-radius: 4px;
 	box-shadow: 0.3rem 0.3rem 1rem ${(props) => props.theme.colors.shadow};
 	background-color: ${(props) => props.theme.colors.dark};

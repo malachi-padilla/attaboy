@@ -40,11 +40,12 @@ export const HeadingMain = styled.h1`
 	text-transform: uppercase;
 	animation: 1s ${MoveInLeft} ease-in-out;
 `;
-export const HeadingSub = styled(HeadingMain)`
+export const HeadingSub = styled.h2`
 	font-style: italic;
 	text-transform: unset;
 	font-size: ${(props) => (props.isDesktop ? '3rem' : '2rem')};
 	animation: 1s ${MoveInRight} ease-in-out;
+	color: ${(props) => props.theme.colors.light};
 `;
 
 export const LandingBtn = styled(BtnMain)`

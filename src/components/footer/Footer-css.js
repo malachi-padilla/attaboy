@@ -42,7 +42,7 @@ export const FbLink = styled.a`
 	}
 `;
 
-export const License = styled.h1`
+export const License = styled.p`
 	color: rgba(255, 255, 255, 0.7);
 	font-weight: 300;
 	font-size: 1.6rem;
