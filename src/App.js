@@ -26,10 +26,12 @@ const App = () => {
 	}, []);
 
 	useEffect(() => {
-		getReviews().then((response) => {
-			setReviews(response.result.reviews);
-		});
-	}, []);
+		if (isDesktop) {
+			getReviews().then((response) => {
+				setReviews(response.result.reviews);
+			});
+		}
+	}, [isDesktop]);
 	return (
 		<>
 			<Nav isDesktop={isDesktop} />
