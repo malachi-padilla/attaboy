@@ -150,6 +150,7 @@ export const FormTextArea = styled.textarea`
 
 export const FormBtn = styled.input`
 	height: 3rem;
+	font-size: 1.6rem;
 	padding: 0.8rem;
 	width: 100%;
 	background: ${(props) => props.theme.colors.secondaryRed};
