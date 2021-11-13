@@ -7,4 +7,5 @@ export const MainSection = styled.section`
 	align-items: center;
 	width: 100vw;
 	background-color: ${(props) => props.theme.colors.greyLight};
+	overflow: hidden;
 `;
