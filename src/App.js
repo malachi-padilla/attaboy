@@ -31,7 +31,7 @@ const App = () => {
 				setReviews(response.result.reviews);
 			});
 		}
-	}, []);
+	}, [isDesktop]);
 	return (
 		<>
 			<Nav isDesktop={isDesktop} />
