@@ -164,6 +164,7 @@ export const FormBtn = styled.input`
 	letter-spacing: 0.1rem;
 	transition: all 200ms ease-in;
 	border: none;
+	-webkit-appearance: none;
 
 	&:hover {
 		background: ${(props) => props.theme.colors.mainRed};
