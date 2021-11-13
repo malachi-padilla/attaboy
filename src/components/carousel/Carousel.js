@@ -6,8 +6,8 @@ import Springs from '../../assets/springs_2.png';
 import Openers from '../../assets/openers.png';
 import { MoveInRight, MoveInLeft } from '../../theme/animations';
 
-const Carousel = ({ isDesktop }) => {
-	const images = [Installs, Repairs, Springs, Openers];
+const Carousel = () => {
+	const images = [Repairs, Installs, Springs, Openers];
 	const [image, setImage] = useState(images[0]);
 	const [animate, setAnimate] = useState(false);
 	const [animation, setAnimation] = useState(null);
@@ -32,7 +32,7 @@ const Carousel = ({ isDesktop }) => {
 	};
 
 	return (
-		<CarouselBody img={image} isDesktop={isDesktop}>
+		<CarouselBody img={image}>
 			<CarouselContents animate={animate} animation={animation}>
 				<CarouselBtn
 					onClick={() => {
@@ -44,27 +44,27 @@ const Carousel = ({ isDesktop }) => {
 								setAnimate(false);
 							}, 1000);
 						}
-					}}
-					isDesktop={isDesktop}>
+					}}>
 					<i className='fas fa-angle-left'></i>
 				</CarouselBtn>
 				<TextBox>
-					<CarouselTextMain isDesktop={isDesktop}>
+					<CarouselTextMain>
 						{image === images[0]
-							? 'custom door installs'
-							: image === images[1]
 							? 'emergency repairs'
+							: image === images[1]
+							? 'custom door installs'
 							: image === images[2]
 							? 'spring conversions & installs'
 							: 'openers & tracks'}
 					</CarouselTextMain>
+
 					<EstimateBtn href='#contact'>
 						{image === images[0]
-							? 'get an estimate'
+							? 'call now'
 							: image === images[1]
-							? 'call now'
+							? 'get an estimate'
 							: image === images[2]
-							? 'call now'
+							? 'get an estimate'
 							: 'get an estimate'}
 					</EstimateBtn>
 				</TextBox>
@@ -78,8 +78,7 @@ const Carousel = ({ isDesktop }) => {
 								setAnimate(false);
 							}, 1000);
 						}
-					}}
-					isDesktop={isDesktop}>
+					}}>
 					<i className='fas fa-angle-right'></i>
 				</CarouselBtn>
 			</CarouselContents>

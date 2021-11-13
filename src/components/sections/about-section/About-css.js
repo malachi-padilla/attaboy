@@ -13,7 +13,7 @@ export const AboutSectionHeader = styled.div`
 	justify-content: center;
 	align-items: flex-start;
 	gap: 1rem;
-	padding: ${(props) => (props.isDesktop ? '5rem' : ' 0 0 0 2rem')};
+	padding: ${(props) => (props.isDesktop ? '5rem' : ' 3rem')};
 `;
 
 export const HeaderTitle = styled(SecondaryHeading)`

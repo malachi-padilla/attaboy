@@ -1,17 +1,19 @@
 import styled from 'styled-components';
 import { BtnMain } from '../../theme/buttons';
-import { PrimaryHeading } from '../../theme/typogrophy';
+import { GalleryModalBtn } from '../modal/GalleryModal-css';
 
 export const CarouselBody = styled.div`
 	display: flex;
-	height: 100%;
-	width: ${(props) => (props.isDesktop ? '60%' : ' 100%')};
+	height: 80%;
+	width: 90%;
 	background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${(props) => props.img});
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 	overflow: hidden;
 	flex-direction: row;
+	border-radius: 4px;
+	box-shadow: 0.3rem 0.3rem 1rem ${(props) => props.theme.colors.shadow};
 `;
 
 export const CarouselContents = styled.div`
@@ -26,19 +28,25 @@ export const CarouselContents = styled.div`
 `;
 
 export const TextBox = styled.div`
-	height: 100%;
-	width: 80%;
+	height: 50%;
+	width: 70%;
 	display: flex;
 	flex-direction: column;
-	gap: 10rem;
-	justify-content: center;
+	justify-content: space-evenly;
 	align-items: center;
 	text-align: center;
 `;
 
-export const CarouselTextMain = styled(PrimaryHeading)`
-	font-size: ${(props) => (props.isDesktop ? '6rem' : ' 5.5rem')};
+export const CarouselTextMain = styled.h2`
+	font-size: 6rem;
 	text-transform: capitalize;
+	color: ${(props) => props.theme.colors.light};
+`;
+
+export const CarouselParagraph = styled.p`
+	font-size: 2rem;
+	color: ${(props) => props.theme.colors.light};
+	font-weight: 500;
 `;
 
 export const EstimateBtn = styled(BtnMain)`
@@ -47,12 +55,8 @@ export const EstimateBtn = styled(BtnMain)`
 	line-height: 3rem;
 `;
 
-export const CarouselBtn = styled.button`
-	background-color: transparent;
-	color: ${(props) => props.theme.colors.light};
-	outline: none;
-	border: none;
-	font-size: ${(props) => (props.isDesktop ? '5rem' : '3rem')};
-	cursor: pointer;
-	width: 10%;
+export const CarouselBtn = styled(GalleryModalBtn)`
+	width: 3rem;
+	height: 3rem;
+	font-size: 2rem;
 `;

@@ -15,7 +15,7 @@ const Landing = ({ isDesktop }) => {
 					<HeadingMain isDesktop={isDesktop}>get a free estimate today</HeadingMain>
 					<HeadingSub isDesktop={isDesktop}>"At our best and at your service"</HeadingSub>
 				</LandingText>
-				<LandingBtn href='#contact'>contact us now</LandingBtn>
+				<LandingBtn href='#contact'>contact us today</LandingBtn>
 			</LandingSectionContents>
 		</LandingSection>
 	);

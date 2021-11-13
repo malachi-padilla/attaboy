@@ -12,7 +12,6 @@ export const LandingSection = styled(MainSection)`
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: right center;
-	border-bottom: 0.3rem solid ${(props) => props.theme.colors.mainRed};
 `;
 
 export const LandingSectionContents = styled.div`
@@ -40,16 +39,17 @@ export const HeadingMain = styled.h1`
 	text-transform: uppercase;
 	animation: 1s ${MoveInLeft} ease-in-out;
 `;
-export const HeadingSub = styled(HeadingMain)`
+export const HeadingSub = styled.h2`
 	font-style: italic;
 	text-transform: unset;
 	font-size: ${(props) => (props.isDesktop ? '3rem' : '2rem')};
 	animation: 1s ${MoveInRight} ease-in-out;
+	color: ${(props) => props.theme.colors.light};
 `;
 
 export const LandingBtn = styled(BtnMain)`
 	width: 20rem;
 	line-height: 3rem;
 	animation: 1s ${MoveInBottom} ease-in-out;
-	font-size: 1.6rem;
+	font-size: 1.2rem;
 `;

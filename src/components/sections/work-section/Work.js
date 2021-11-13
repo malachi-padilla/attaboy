@@ -32,6 +32,8 @@ import Img_12 from '../../../assets/job9.jpeg';
 import Img_13 from '../../../assets/job10.jpeg';
 import Img_14 from '../../../assets/job11.jpeg';
 import GalleryModal from '../../modal/GalleryModal';
+import { disableScroll, enableScroll } from '../../../util/utilFunctions';
+import { useEffect } from 'react';
 
 const Work = ({ isDesktop }) => {
 	const images = [
@@ -69,6 +71,13 @@ const Work = ({ isDesktop }) => {
 			setGalleryImage(images[images.length - 1]);
 		}
 	};
+	useEffect(() => {
+		if (galleryOpen && !isDesktop) {
+			disableScroll();
+		} else {
+			enableScroll();
+		}
+	}, [galleryOpen, isDesktop]);
 	return (
 		<WorkSectionContainer id='work' isDesktop={isDesktop}>
 			{galleryOpen && (
