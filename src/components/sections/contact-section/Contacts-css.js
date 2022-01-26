@@ -12,7 +12,7 @@ export const ContactSection = styled(MainSection)`
 `;
 
 export const ContactForm = styled.form`
-	height: ${(props) => (props.isDesktop ? '80%' : '100%')};
+	height: ${(props) => (props.isDesktop ? '80%' : '80%')};
 	width: ${(props) => (props.isDesktop ? '40%' : '100%')};
 	display: flex;
 	flex-direction: column;
@@ -38,7 +38,7 @@ export const FormHeading = styled.div`
 export const FormHeader = styled(SecondaryHeading)`
 	color: ${(props) => props.theme.colors.dark};
 	text-align: center;
-	font-size: ${(props) => (props.isDesktop ? '5rem' : '3rem')};
+	font-size: ${(props) => (props.isDesktop ? '4rem' : '3rem')};
 	span {
 		font-family: 'Fugaz One', cursive;
 		color: ${(props) => props.theme.colors.secondaryRed};
@@ -51,7 +51,7 @@ export const FormSubHeader = styled(ParagraphMain)`
 	text-align: center;
 	text-transform: uppercase;
 	color: ${(props) => props.theme.colors.secondaryRed};
-	font-size: 1.6rem;
+	font-size: 1.4rem;
 	font-weight: 700;
 	@media only screen and (max-width: 320px) {
 		font-size: 1.2rem;
