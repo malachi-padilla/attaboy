@@ -72,11 +72,11 @@ const Contacts = ({ isDesktop }) => {
 				<FormContent isDesktop={isDesktop}>
 					<FormGroup>
 						<FormLabel>Name</FormLabel>
-						<FormInput type='text' required placeholder='name' name='name' />
+						<FormInput type='text' required placeholder='Name' name='name' />
 					</FormGroup>
 					<FormGroup>
 						<FormLabel>Email</FormLabel>
-						<FormInput type='email' required placeholder='email@example.com' name='email' />
+						<FormInput type='email' required placeholder='Email' name='email' />
 					</FormGroup>
 					<FormGroup>
 						<FormTextArea placeholder="what's your emergency?" cols='30' rows='5' name='message' />
@@ -88,7 +88,7 @@ const Contacts = ({ isDesktop }) => {
 							<ParagraphMain>or</ParagraphMain>
 							<span></span>
 						</BtnDivider>
-						<CallBtn href='tel:9162136418'>916-213-6418</CallBtn>
+						<CallBtn href='tel:9162136418'>give us a call</CallBtn>
 					</BtnGroup>
 				</FormContent>
 			</ContactForm>

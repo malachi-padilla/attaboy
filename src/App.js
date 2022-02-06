@@ -33,7 +33,7 @@ const App = () => {
 		}
 	}, [isDesktop]);
 	return (
-		<>
+		<React.Fragment>
 			<Nav isDesktop={isDesktop} />
 			<Landing isDesktop={isDesktop} />
 			<Services isDesktop={isDesktop} />
@@ -41,7 +41,7 @@ const App = () => {
 			<About isDesktop={isDesktop} reviews={reviews} />
 			<Contacts isDesktop={isDesktop} />
 			<Footer />
-		</>
+		</React.Fragment>
 	);
 };
 
