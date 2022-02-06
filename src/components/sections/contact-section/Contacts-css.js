@@ -12,7 +12,7 @@ export const ContactSection = styled(MainSection)`
 `;
 
 export const ContactForm = styled.form`
-	height: ${(props) => (props.isDesktop ? '80%' : '100%')};
+	height: ${(props) => (props.isDesktop ? '90%' : '100%')};
 	width: ${(props) => (props.isDesktop ? '40%' : '100%')};
 	display: flex;
 	flex-direction: column;
