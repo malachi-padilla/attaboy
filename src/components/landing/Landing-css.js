@@ -48,8 +48,8 @@ export const HeadingSub = styled.h2`
 `;
 
 export const LandingBtn = styled(BtnMain)`
-	width: 20rem;
-	line-height: 3rem;
 	animation: 1s ${MoveInBottom} ease-in-out;
-	font-size: 1.2rem;
+	font-size: 2rem;
+	padding: 2rem;
+	font-weight: 600;
 `;
